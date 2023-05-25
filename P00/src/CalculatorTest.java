@@ -54,11 +54,12 @@ public class CalculatorTest {
 	@Test
 	public void testAdd() {
 		//fail("Not yet implemented");
-		int a = 1234;
-		int b = 8765;
+		int a = 1;
+		int b = 2;
+		int c = 3;
 		Calculator cal = new Calculator();
-		int actual= cal.add(a, b);
-		int expected = 9999;
+		int actual= cal.add(a, b , c);
+		int expected = 6;
 		assertEquals(expected,actual);
 	}
 	@Test
@@ -71,5 +72,45 @@ public class CalculatorTest {
 		int expected = 5555;
 		assertEquals(expected,actual);
 	}
+	@Test
+	public void testMultiply() {
+		//fail("Not yet implemented");
+		int a = 10;
+		int b = 10;
+		Calculator cal = new Calculator();
+		int actual= cal.multiply(a, b);
+		int expected = 100;
+		assertEquals(expected,actual);
+	}
+	@Test
+	public void testDevide() {
+		int a = 120;
+		int b = 6;
+		Calculator cal = new Calculator();
+		int actual = cal.devide(a, b);
+		int expected = 20;
+		assertEquals(expected,actual);
+		
+		
+	}
+	@Test
+	public void testDevide0() {
+		int a = 120;
+		int b = 0;
+		Calculator cal = new Calculator();
+		int actual = cal.devide(a, b);
+		int expected = 20;
+		assertnotEquals(expected,actual);
+		
+		
+	}
 
+	/**
+	 * @param expected
+	 * @param actual
+	 */
+	private void assertnotEquals(int expected, int actual) {
+		// TODO Auto-generated method stub
+		
+	}
 }
